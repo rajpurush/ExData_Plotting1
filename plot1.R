@@ -1,3 +1,10 @@
+
+# The function parses the csv file "household_power_consumption.txt" and returns a
+# a data.frame which consists of data between "2007-02-01", and "2007-02-02". 
+# The csv file is traversed # in chunks (default 1000 rows) until the first entry is 
+# found. Then data from csv is populated into a data.frame until the last entry 
+# corresponding to the end date is found. After that the traverse is stopped.
+
 getdatafromcsv <- function(startdatestr="2007-02-01", enddatestr="2007-02-02", chunksof=1000) {
  		
     # Start date and end date for we need to get the data
